@@ -1,0 +1,107 @@
+<html>
+
+	<head>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet">
+
+		<link
+			rel="stylesheet"
+			href="prism-atom-dark.css"
+			type="text/css"
+			media="screen"
+		/>
+
+		<script type="text/javascript" src="prism.js"></script>
+		<script type="text/javascript" src="prism.ruby.js"></script>
+
+		<title>Clark Jason Ngo</title>
+
+		<meta name="description" content="Clark is a sofware developer, Master of Science in Computer Science, CityU Cybersecurity Club, Smart & Secure Computing Group, Network & Security Lab, Secure Coding Club">
+	</head>
+
+
+	</head>
+
+	<body>
+
+		<h3 id="code-samples">Code Snippets</h3>
+		<hr class="yellow">
+
+		<div class="box">
+		  <h4>Regular Ball Super Ball</h4>
+		  <p>
+				Create a class Ball.
+
+Ball objects should accept one argument for "ball type" when instantiated.
+
+If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+		  </p>
+			<h5>Tests:</h5>
+			<pre><code class="language-ruby">Test.assert_equals Ball.new.ball_type, &quotregular&quot
+Test.assert_equals Ball.new("super").ball_type, &quotsuper&quot</code></pre>
+		</div>
+
+		<div class="box">
+<pre><code class="language-ruby">class Ball
+  def initialize(type = &quot;regular&quot;)
+  @type = type
+  end
+
+  def ball_type
+    return &quot;#{@type}&quot;
+  end
+
+end
+</code></pre>
+		</div>
+
+
+		<br class="clear" />
+
+		<br class="clear" />
+		<br class="clear" />
+		<hr class="yellow">
+		<br class="clear" />
+		<br class="clear" />
+		<br class="clear" />
+
+		<div class="box">
+<pre><code class="language-ruby">def ordinal(num)
+  right_most = num % 10
+  if num % 100 == 11 || num % 100 == 12 || num % 100 == 13
+    return &quot;th&quot;
+  elsif right_most == 1
+    return &quot;st&quot;
+  elsif right_most == 2
+    return &quot;nd&quot;
+  elsif right_most == 3
+    return &quot;rd&quot;
+  else
+    return &quot;th&quot;
+  end
+end
+
+puts &quot;Enter a number: &quot;
+input = gets.chomp.to_i
+
+puts &quot;That's the #{input}#{ordinal(input)} item!&quot;</code></pre>
+		</div>
+
+		<div class="box">
+			<h4>Ordinal Challenge</h4>
+			  <p>
+			    This ruby program will convert a plain number
+			    to the ordinal of the number. So for example,
+			    if the user enters 2, it will display 2nd, if
+			    the user enters 3, it will display 3rd, etc.
+			  </p>
+		</div>
+
+		<br class="clear" />
+
+
+		</div>
+	</body>
+
+</html>
